@@ -1,15 +1,19 @@
 package polymorphism.area;
 
 public class AreaCalculator {
-    void alanHesapla(){
-        System.out.println("Alan hesaplanamiyor..Gecersiz sekil");
+    void calculateArea(){
+        System.out.println("The area cannot be calculated. Invalid shape.");
     }
 
-    void alanHesapla(double kenar){
-        System.out.println("Karenin alani:" + kenar * kenar);
-    }
-    void alanHesapla(double uzunuk, double genislik){
-        System.out.println("Dikdortgenin alani:" + uzunuk * genislik);
+    void calculateArea(double side) {
+        System.out.println("Square area: " + side * side);
     }
 
+    void calculateArea(int length, int width) {
+        System.out.println("Rectangle area: " + length * width);
+    }
+
+    void calculateArea(double length, double width) {
+        System.out.println("Decimal rectangle area: " + length * width);
+    }
 }
